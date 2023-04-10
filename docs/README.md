@@ -4,13 +4,21 @@
 classDiagram
     class Bolillero{
         +cantBolillas: int 
-        +JugadaAcertada: bool
-        +sacarBolilla() int
-        +JugarNveces<list>(bolillas)
-        +BolillasSacadas<list>(bolillas)
-}
-    class BolillasSacadas{
+        +SacarBolilla() int 
+        +Jugar(List~int~) bool
+        +JugarNveces(List~int~, int) int
+        +MeterBolillas() 
+        }
+    class IAzar{
         <<interface>>
-        +
+        +Numaleatorios: int
+        +ElegirBolilla(List~int~)
+        }
+    class AzarRandom{
+        Numaleatorios: int
+        ElegirBolilla() int
     }
+
+    Bolillero --> IAzar
+    AzarRandom ..|> IAzar
 ```
