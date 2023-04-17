@@ -1,31 +1,30 @@
 namespace Biblioteca;
 
-public class Bolillero : IAzar
+public class Bolillero
 {
-    public int CantidadBolillas { get; set; }
-    public bool JugadaAcertada { get; set; }
-    public int numAleatorios { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public List<int> Bolillas { get; set; }
+    public int cantidad { get; set; }
+    public IAzar IAZAR { get; set; }
 
-    public Bolillero(int CantidadBolillas, bool JugadaAcertada)
+    public Bolillero(int Cantidad, bool JugadaAcertada)
     {
-        CantidadBolillas = CantidadBolillas;
-        JugadaAcertada = JugadaAcertada;
+        this.cantidad = cantidad;
 
     }
 
     public void SacarBolilla()
     {
-
+        for ()
     }
-    public void Jugar(List<int>)
+    public void Jugar()
     {
 
     }
-    public void JugarNveces(List<int>, int)
+    public void JugarNveces()
     {
 
     }
-    public void BolillasSacadas()
+    public void MeterBolillas()
     {
 
     }
