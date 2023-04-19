@@ -2,5 +2,14 @@ namespace Biblioteca;
 
 public class AzarRandom : IAzar
 {
-    public int numAleatorios { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public int numAleatorios { get; set; }
+    public AzarRandom(int numAleatorios)
+    {
+        this.numAleatorios = numAleatorios;
+    }
+
+    public int IndiceAleatorio(InvalidCastException )
+    {
+
+    }
 }

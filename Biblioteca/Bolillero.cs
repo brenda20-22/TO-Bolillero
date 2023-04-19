@@ -2,19 +2,20 @@ namespace Biblioteca;
 
 public class Bolillero
 {
-    public List<int> Bolillas { get; set; }
-    public int cantidad { get; set; }
-    public IAzar IAZAR { get; set; }
+    public List<int> Adentro { get; set; }
+    public List<int> Afuera { get; set; }
+    public List<int> 
+    public IAzar azar { get; set; }
 
-    public Bolillero(int Cantidad, bool JugadaAcertada)
+    public Bolillero(int Cantidad, IAzar azar)
     {
-        this.cantidad = cantidad;
-
+        this.Afuera = Afuera;
+        this.Adentro = Adentro;
     }
 
-    public void SacarBolilla()
+    public int SacarBolilla()
     {
-        for ()
+        var indiceAleatorio = azar.IndiceAleatorio(this.cantidad);
     }
     public void Jugar()
     {
