@@ -2,14 +2,14 @@ namespace Biblioteca;
 
 public class AzarRandom : IAzar
 {
-    public int numAleatorios { get; set; }
-    public AzarRandom(int numAleatorios)
-    {
-        this.numAleatorios = numAleatorios;
-    }
+    private Random _random { get; set; }
+    public AzarRandom()
+    => _random = new Random(DateTime.Now.Millisecond);
 
-    public int IndiceAleatorio(InvalidCastException )
-    {
 
-    }
+
+    public int IndiceAleatorio(List<int> Adentro)
+
+    => _random.Next(0, Adentro.Count);
+
 }

@@ -3,8 +3,9 @@
 ```mermaid
 classDiagram
     class Bolillero{
-        +Bolillas List~int~
-        +cantBolillas: int 
+        +Adentro List~int~
+        +Afuera List~int~
+        +Jugada List~int~ 
         +SacarBolilla() int 
         +Jugar(List~int~) bool
         +JugarNveces(List~int~,int) int
@@ -12,11 +13,9 @@ classDiagram
         }
     class IAzar{
         <<interface>>
-        +Numaleatorios: int
         +IndiceAleatorio(List~int~) int
         }
     class AzarRandom{
-        +Numaleatorios: int
         +IndiceAleatorio(List~int~) int
     }
 
