@@ -29,12 +29,11 @@ public class Bolillero
     }
     public bool Jugar(List<int> jugada)
     {
-        var ax = 0;
         for (int i = 0; i < jugada.Count; ++i)
         {
             var bolilla = SacarBolilla();
 
-            if (bolilla != jugada[ax])
+            if (bolilla != jugada[i])
             {
                 return false;
             }
@@ -42,21 +41,23 @@ public class Bolillero
         return true;
     }
 
-    public void JugarNveces(List<int> jugada, int cantidad)
+    public int JugarNveces(List<int> jugada, int cantidad)
     {
         var ganadas = 0;
         for (int i = 0; i <= cantidad; ++i)
         {
-            var jugar = Jugar(jugada);
-            if (jugar == true)
+            MeterBolillas();
+            if (Jugar(jugada))
             {
-                ganadas = +1;
+                ganadas++;
             }
         }
+        return ganadas;
     }
     public void MeterBolillas()
     {
-
+        Adentro.AddRange(Afuera);
+        Afuera.Clear();
     }
 }
 
