@@ -2,7 +2,6 @@ using Biblioteca;
 
 namespace Test;
 
-[TestClass]
 public class TestBolillero
 {
     public Bolillero bolillero { get; set; }

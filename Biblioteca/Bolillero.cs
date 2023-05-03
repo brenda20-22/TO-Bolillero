@@ -7,12 +7,13 @@ public class Bolillero
     public List<int> Jugada { get; set; }
     public IAzar azar { get; set; }
 
-    public Bolillero(int adentro, int afuera, IAzar azar)
+    public Bolillero( int cantidad, IAzar azar)
     {
         this.Adentro = new List<int>();
         this.Afuera = new List<int>();
         this.Jugada = new List<int>();
         this.azar = azar;
+        CrearBolilla(cantidad);
     }
 
     public int SacarBolilla()
@@ -58,6 +59,14 @@ public class Bolillero
     {
         Adentro.AddRange(Afuera);
         Afuera.Clear();
+    }
+
+    public void CrearBolilla(int cantidad)
+    {
+        for (int i = 0; i <= cantidad; i++)
+        {
+            Adentro.Add(i);
+        }
     }
 }
 

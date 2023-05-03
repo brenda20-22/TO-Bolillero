@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca", "Biblioteca\Biblioteca.csproj", "{D5E947C2-15DD-4899-912C-BA9318497A55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{C5FD317A-DB6A-4703-96F9-5DB44404672B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPosta", "TestPosta\TestPosta.csproj", "{F49F6639-EABC-49DC-97EB-84226F59913C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +20,9 @@ Global
 		{D5E947C2-15DD-4899-912C-BA9318497A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5E947C2-15DD-4899-912C-BA9318497A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5E947C2-15DD-4899-912C-BA9318497A55}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5FD317A-DB6A-4703-96F9-5DB44404672B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5FD317A-DB6A-4703-96F9-5DB44404672B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5FD317A-DB6A-4703-96F9-5DB44404672B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5FD317A-DB6A-4703-96F9-5DB44404672B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F49F6639-EABC-49DC-97EB-84226F59913C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F49F6639-EABC-49DC-97EB-84226F59913C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F49F6639-EABC-49DC-97EB-84226F59913C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F49F6639-EABC-49DC-97EB-84226F59913C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
