@@ -21,12 +21,14 @@ public class TestBolillero
     public void ReingresarBolilla()
     {
         var numero = bolillero.SacarBolilla();
-        var espera = 0;
-        var espera1 = 10;
+        var espera = 9;
 
-        Assert.Equal(numero, espera);
-        Assert.Equal(espera, bolillero.Adentro.Count);
-        Assert.Equal(espera1, bolillero.Afuera.Count);
+
+
+        Assert.Single(bolillero.Afuera);
+        bolillero.MeterBolillas();
+        Assert.Empty(bolillero.Afuera);
+
 
     }
 
