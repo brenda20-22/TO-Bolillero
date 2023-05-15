@@ -6,13 +6,15 @@ public class Bolillero
     public List<int> Afuera { get; set; }
     public List<int> Jugada { get; set; }
     public IAzar azar { get; set; }
+    public Iclonable iclonable { get; set; }
 
-    public Bolillero( int cantidad, IAzar azar)
+    public Bolillero(int cantidad, IAzar azar, Iclonable iclonable)
     {
         this.Adentro = new List<int>();
         this.Afuera = new List<int>();
         this.Jugada = new List<int>();
         this.azar = azar;
+        this.iclonable = iclonable;
         CrearBolilla(cantidad);
     }
 
