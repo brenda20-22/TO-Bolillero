@@ -1,5 +1,6 @@
 namespace Biblioteca;
 
+
 public class Bolillero
 {
     public List<int> Adentro { get; set; }
@@ -16,6 +17,13 @@ public class Bolillero
         this.azar = azar;
         this.iclonable = iclonable;
         CrearBolilla(cantidad);
+    }
+
+    private Bolillero(Bolillero original)
+    {
+        Adentro = new List<int>(original.Adentro);
+        Afuera = new List<int>(original.Afuera);
+        azar = original.azar;
     }
 
     public int SacarBolilla()
