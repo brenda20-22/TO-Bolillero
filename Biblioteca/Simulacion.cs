@@ -16,10 +16,15 @@ public class Simulacion
 
 
 
-    public long SimularConHilos(Bolillero bolillero, List<int> jugada, int cantidad)
+    public long SimularConHilos(Bolillero bolillero, List<int> jugada, int cantidad, int hilos)
     {
-        Task<long> jugada =
+        Task<long> [] tareas = new Task<long>[hilos];
+        for (int i = 0; i < hilos -1; i++ )
+        {
+            var clonar = new List<int>() {"Adentro", "Afuera", "azar"};
+        }
     }
+    
 
 
 
