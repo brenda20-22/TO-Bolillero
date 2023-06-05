@@ -31,4 +31,11 @@ public class TestSimularConHilos
         var resultado = simulacion.SimularConHilos(bolillero, _jugada, _cantidad, _hilos);
         Assert.Equal((long)2, resultado);
     }
+
+    [Fact]
+    public void SimularConHilosAsync()
+    {
+        var sumahilos = simulacion.SimularConHilosAsync(bolillero, _jugada, _cantidad, _hilos);
+        Assert.Equal((long)2, sumahilos);
+    }
 }
