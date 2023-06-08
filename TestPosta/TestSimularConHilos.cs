@@ -15,7 +15,7 @@ public class TestSimularConHilos
         _jugada = new List<int>() { 0 };
         _cantidad = 1;
         simulacion = new Simulacion();
-        _hilos = 2;
+        _hilos = 4;
     }
 
     [Fact]
@@ -29,13 +29,14 @@ public class TestSimularConHilos
     public void SimularConHilos()
     {
         var resultado = simulacion.SimularConHilos(bolillero, _jugada, _cantidad, _hilos);
-        Assert.Equal((long)2, resultado);
+        Assert.Equal(_hilos, resultado);
     }
 
+
     [Fact]
-    public void SimularConHilosAsync()
+    public async Task SimularConHilosAsync()
     {
-        var sumahilos = simulacion.SimularConHilosAsync(bolillero, _jugada, _cantidad, _hilos);
-        Assert.Equal((long)2, sumahilos);
+        var sumahilos = await simulacion.SimularConHilosAsync(bolillero, _jugada, _cantidad, _hilos);
+        Assert.Equal(_hilos, sumahilos);
     }
 }
