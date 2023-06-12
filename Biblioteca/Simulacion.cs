@@ -31,4 +31,9 @@ public class Simulacion
         var suma = tareas.Sum(t => t.Result);
         return suma;
     }
+
+    public async Task<long> SimularParallelAsync()
+    {
+
+    }
 }

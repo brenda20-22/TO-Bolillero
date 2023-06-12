@@ -15,7 +15,7 @@ public class TestSimularConHilos
         _jugada = new List<int>() { 0 };
         _cantidad = 1;
         simulacion = new Simulacion();
-        _hilos = 4;
+        _hilos = 2;
     }
 
     [Fact]
