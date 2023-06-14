@@ -39,4 +39,11 @@ public class TestSimularConHilos
         var sumahilos = await simulacion.SimularConHilosAsync(bolillero, _jugada, _cantidad, _hilos);
         Assert.Equal(_hilos, sumahilos);
     }
+
+    [Fact]
+    public async Task SimularParallelAsync()
+    {
+        var simulaciones = await simulacion.SimularParallelAsync(bolillero, _jugada, _cantidad, _hilos);
+        Assert.Equal(_cantidad, simulaciones);  
+    }
 }

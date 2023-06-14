@@ -32,8 +32,21 @@ public class Simulacion
         return suma;
     }
 
-    public async Task<long> SimularParallelAsync()
+    public async Task<long> SimularParallelAsync(Bolillero bolillero, List<int> jugada, int cantidad, int hilos)
     {
+        long [] resultados = new long [cantidad];
 
+        await Task.Run( () =>
+            Parallel.For(
+                0,
+                cantidad,
+                i =>
+                {
+                    var clon = bolillero.Clonar();
+                    resultados[i] = clon.JugarNveces(jugada, cantidad / hilos);
+                }
+            )
+        );
+        return resultados.Sum();
     }
 }
